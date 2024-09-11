@@ -17,6 +17,9 @@ const Icon = createIconSetFromIcoMoon(
 export default function App() {
   const [fontsLoaded] = useFonts({
     DelaGothic: require("@/assets/Fonts/DelaGothicOne-Regular.ttf"),
+    KodRegular: require("@/assets/Fonts/Kodchasan-Regular.ttf"),
+    KodMedium: require("@/assets/Fonts/Kodchasan-Medium.ttf"),
+    KodBold: require("@/assets/Fonts/Kodchasan-Bold.ttf"),
   });
 
   if (!fontsLoaded) {

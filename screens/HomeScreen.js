@@ -64,10 +64,10 @@ const styles = StyleSheet.create({
   },
   secBold: {
     fontWeight: "700",
-    fontFamily: "Kodchasan-Bold",
+    fontFamily: "KodBold",
   },
   secText: {
-    fontFamily: "Kodchasan-Regular",
+    fontFamily: "KodRegular",
   },
   textContainer: {
     fontSize: 12,
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   subHeader: {
     fontSize: 14,
     fontWeight: "700",
-    fontFamily: "Kodchasan-Bold",
+    fontFamily: "KodBold",
     color: "#fff6ef",
     textAlign: "center",
     paddingTop: 15,
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   },
   progressPercentage: {
     fontSize: 10,
-    fontFamily: "Kodchasan-Regular",
+    fontFamily: "KodRegular",
     color: "#fff6ef",
     textAlign: "center",
   },

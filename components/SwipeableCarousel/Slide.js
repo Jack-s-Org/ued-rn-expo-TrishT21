@@ -52,8 +52,9 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#fff",
-    fontSize: 24,
-    fontWeight: "bold",
+    fontSize: 20,
+    // fontWeight: "bold",
+    fontFamily: "KodBold",
   },
 });
 
