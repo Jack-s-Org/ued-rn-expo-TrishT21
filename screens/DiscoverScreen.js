@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Pressable } from "react-native";
 // import { red } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -14,9 +14,15 @@ const DiscoverScreen = () => {
         </View>
       </View>
 
-      <View styles={styles.tapeContainer}>
-        <View styles={styles.tape}></View>
-      </View>
+      <Pressable style={styles.exercisePressable} onPress={() => {}} />
+
+      <Pressable style={styles.challengePressable} onPress={() => {}} />
+
+      <Pressable style={styles.sleepPressable} onPress={() => {}} />
+
+      <Pressable style={styles.nutritionPressable} onPress={() => {}} />
+
+      <Pressable style={styles.meditationPressable} onPress={() => {}} />
     </SafeAreaView>
   );
 };
@@ -63,13 +69,92 @@ const styles = StyleSheet.create({
     position: "relative",
     margin: 20,
   },
-  tapeContainer: {
-    position: "relative",
-  },
-  tape: {
+  exerciseContainer: {
     width: "100%",
-    borderRadius: 10,
-    borderStyle: "Solid",
+  },
+
+  exercisePressable: {
+    backgroundColor: "#d96073",
+    borderStyle: "solid",
+    borderColor: "#fff6ef",
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    // flex: 1,
+    width: "100%",
+    height: 58,
+  },
+  challengeContainer: {},
+
+  challengePressable: {
+    marginTop: 60,
+    marginLeft: -30,
+    backgroundColor: "#d96073",
+    borderStyle: "solid",
+    borderColor: "#fff6ef",
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    // flex: 1,
+    width: "130%",
+    height: 58,
+    transform: [
+      {
+        rotate: "13deg",
+      },
+    ],
+  },
+
+  sleepPressable: {
+    marginTop: 50,
+    marginLeft: -0,
+    backgroundColor: "#d96073",
+    borderStyle: "solid",
+    borderColor: "#fff6ef",
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    // flex: 1,
+    width: "130%",
+    height: 58,
+    transform: [
+      {
+        rotate: "-3deg",
+      },
+    ],
+  },
+
+  nutritionPressable: {
+    marginTop: 40,
+    marginLeft: -30,
+    backgroundColor: "#d96073",
+    borderStyle: "solid",
+    borderColor: "#fff6ef",
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    // flex: 1,
+    width: "130%",
+    height: 58,
+    transform: [
+      {
+        rotate: "5deg",
+      },
+    ],
+  },
+
+  meditationPressable: {
+    marginTop: 40,
+    marginLeft: -30,
+    backgroundColor: "#d96073",
+    borderStyle: "solid",
+    borderColor: "#fff6ef",
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    // flex: 1,
+    width: "130%",
+    height: 58,
+    transform: [
+      {
+        rotate: "-5deg",
+      },
+    ],
   },
 });
 
