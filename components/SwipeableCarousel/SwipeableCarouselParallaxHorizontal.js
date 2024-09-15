@@ -126,7 +126,7 @@ function SwipeableCarouselParallaxHorizontal() {
     <View>
       <View
         style={{
-          height: windowWidth * 1,
+          height: windowWidth,
         }}
       >
         <Carousel

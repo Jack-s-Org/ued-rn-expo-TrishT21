@@ -8,11 +8,11 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import VideoPlayer from "./components/VideoPlayer";
 import { StatusBar } from "expo-status-bar";
 
-const Icon = createIconSetFromIcoMoon(
-  require("@/assets/icomoon/selection.json"),
-  "IcoMoon",
-  "PacMan.ttf"
-);
+// const Icon = createIconSetFromIcoMoon(
+//   require("@/assets/icomoon/selection.json"),
+//   "IcoMoon",
+//   "PacMan.ttf"
+// );
 
 export default function App() {
   const [fontsLoaded] = useFonts({

@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   mainContainer: {
     margin: 18,
-    marginTop: -18,
+    marginTop: -55,
     alignItems: "flex-start",
     alighContent: "flex-start",
     // justifyContent: "center",
