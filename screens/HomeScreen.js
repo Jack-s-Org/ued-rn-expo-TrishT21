@@ -31,6 +31,28 @@ const HomeScreen = () => {
         </View>
       </View>
       <SwipeableCarouselParallaxHorizontal />
+      <View style={styles.durationParent}>
+        <Text style={styles.duration}>10 mins</Text>
+      </View>
+      <View style={styles.headerTwoParent}>
+        <Text style={styles.headerTwo}>how are you feeling</Text>
+        <View style={styles.borderBorder}>
+          <View style={styles.borderMood}>
+            <Image
+              source={require("@/assets/Photos/Mood.png")}
+              style={styles.mood}
+            />
+            <Text style={styles.subTextTwo}>Mood</Text>
+          </View>
+          <View style={styles.borderMood}>
+            <Image
+              source={require("@/assets/Photos/Energy.png")}
+              style={styles.energy}
+            />
+            <Text style={styles.subTextTwo}>Mood</Text>
+          </View>
+        </View>
+      </View>
     </SafeAreaView>
   );
 };
@@ -62,6 +84,7 @@ const styles = StyleSheet.create({
     color: "#fff6ef",
     textAlign: "left",
   },
+
   secBold: {
     fontWeight: "700",
     fontFamily: "KodBold",
@@ -118,6 +141,89 @@ const styles = StyleSheet.create({
     fontFamily: "KodRegular",
     color: "#fff6ef",
     textAlign: "center",
+  },
+  durationParent: {
+    borderRadius: 10,
+    backgroundColor: "#d96073",
+    borderStyle: "solid",
+    borderColor: "#fff6ef",
+    borderWidth: 1,
+    // flex: 1,
+    width: 80,
+    height: 34,
+    overflow: "hidden",
+    marginTop: -20,
+    marginLeft: 160,
+  },
+  duration: {
+    fontSize: 12,
+    lineHeight: 18,
+    fontFamily: "DelaGothicOne-Regular",
+    color: "#fff6ef",
+    textAlign: "center",
+    marginTop: 7,
+  },
+  headerTwo: {
+    fontSize: 16,
+    textTransform: "uppercase",
+    fontFamily: "DelaGothic",
+    color: "#fff6ef",
+    textAlign: "left",
+  },
+  headerTwoParent: {
+    // backgroundColor: "blue",
+    width: "100%",
+    height: "100%",
+    padding: 16,
+  },
+  borderBorder: {
+    flexDirection: "row",
+  },
+  borderMood: {
+    borderRadius: 10,
+    // backgroundColor: "#262628",
+    borderStyle: "solid",
+    borderColor: "#fff6ef",
+    borderWidth: 1,
+    // flex: 1,
+    width: 112,
+    height: 120,
+    // opacity: 0.5,
+    margin: 20,
+  },
+  borderEnergy: {
+    borderRadius: 10,
+    // backgroundColor: "#262628",
+    borderStyle: "solid",
+    borderColor: "#fff6ef",
+    borderWidth: 1,
+    // flex: 1,
+    width: 112,
+    height: 120,
+    // opacity: 0.5,
+    margin: 20,
+  },
+  mood: {
+    borderRadius: 1,
+    width: 56,
+    height: 56,
+    margin: 25,
+    marginTop: 15,
+  },
+  energy: {
+    borderRadius: 1,
+    width: 56,
+    height: 56,
+    margin: 25,
+    marginTop: 15,
+  },
+  subTextTwo: {
+    fontSize: 14,
+    fontWeight: "700",
+    fontFamily: "KodBold",
+    color: "#fff6ef",
+    textAlign: "center",
+    marginTop: -6,
   },
 });
 

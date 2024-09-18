@@ -1,8 +1,8 @@
-import { StyleSheet, View, Text, Pressable } from "react-native";
+import { StyleSheet, View, Text, Pressable, Image, Alert } from "react-native";
 // import { red } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const DiscoverScreen = () => {
+const DiscoverScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.backgroundCont}>
       <View style={styles.rectangleParent}>
@@ -18,26 +18,104 @@ const DiscoverScreen = () => {
           <Pressable style={styles.exercisePressable} onPress={() => {}} />
         </View> */}
       <View style={styles.sectionParent}>
-        <View style={styles.exerciseParent}>
+        <Pressable
+          style={styles.exerciseParent}
+          onPress={() => {
+            navigation.navigate("Exercise");
+          }}
+        >
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
           <Text style={styles.text}>Exercise</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
           <Text style={styles.text}>Exercise</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
           <Text style={styles.text}>Exercise</Text>
-        </View>
+        </Pressable>
 
         <View style={styles.challengeParent}>
+          <Text style={styles.text}>Challenge</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
+          <Text style={styles.text}>Challenge</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
           <Text style={styles.text}>Challenge</Text>
         </View>
 
         <View style={styles.sleepParent}>
           <Text style={styles.text}>Sleep</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
+          <Text style={styles.text}>Sleep</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
+          <Text style={styles.text}>Sleep</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
+          <Text style={styles.text}>Sleep</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
         </View>
 
         <View style={styles.nutritionParent}>
           <Text style={styles.text}>Nutrition</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
+          <Text style={styles.text}>Nutrition</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
+          <Text style={styles.text}>Nutrition</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
         </View>
 
         <View style={styles.meditationParent}>
           <Text style={styles.text}>Meditation</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
+          <Text style={styles.text}>Meditation</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
+          <Text style={styles.text}>Meditation</Text>
+          <Image
+            source={require("@/assets/Photos/Star 1.png")}
+            style={styles.star}
+          />
+        </View>
+
+        <View style={styles.exploreTextparent}>
+          <Text style={styles.exploreText}>Explore</Text>
         </View>
       </View>
 
@@ -100,7 +178,8 @@ const styles = StyleSheet.create({
   rectangleParent: {
     // width: "100%",
     position: "relative",
-    margin: 20,
+    margin: 30,
+    marginTop: -25,
   },
 
   exerciseParent: {
@@ -123,6 +202,14 @@ const styles = StyleSheet.create({
     fontFamily: "DelaGothic",
     color: "#fff6ef",
     textAlign: "center",
+    textTransform: "uppercase",
+  },
+
+  star: {
+    borderRadius: 1,
+    width: 20,
+    height: 20,
+    margin: 10,
   },
 
   challengeParent: {
@@ -138,6 +225,7 @@ const styles = StyleSheet.create({
     height: 58,
     justifyContent: "center",
     alignItems: "center",
+    flexDirection: "row",
     transform: [
       {
         rotate: "13deg",
@@ -158,6 +246,7 @@ const styles = StyleSheet.create({
     height: 58,
     justifyContent: "center",
     alignItems: "center",
+    flexDirection: "row",
     transform: [
       {
         rotate: "-3deg",
@@ -178,6 +267,7 @@ const styles = StyleSheet.create({
     height: 58,
     justifyContent: "center",
     alignItems: "center",
+    flexDirection: "row",
     transform: [
       {
         rotate: "5deg",
@@ -198,11 +288,24 @@ const styles = StyleSheet.create({
     height: 58,
     justifyContent: "center",
     alignItems: "center",
+    flexDirection: "row",
     transform: [
       {
         rotate: "-5deg",
       },
     ],
+  },
+
+  exploreTextparent: {
+    margin: 35,
+  },
+
+  exploreText: {
+    fontSize: 30,
+    fontFamily: "DelaGothic",
+    color: "#fff6ef",
+    // textAlign: "left",
+    textTransform: "uppercase",
   },
 
   // exercisePressable: {

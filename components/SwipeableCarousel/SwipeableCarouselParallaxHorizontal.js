@@ -113,7 +113,7 @@ function SwipeableCarouselParallaxHorizontal() {
   const baseOptions = isVertical
     ? {
         vertical: false,
-        width: windowWidth,
+        width: windowWidth * 0.6,
         height: windowWidth,
       }
     : {
@@ -126,19 +126,27 @@ function SwipeableCarouselParallaxHorizontal() {
     <View>
       <View
         style={{
-          height: windowWidth,
+          width: windowWidth * 0.8,
+          // backgroundColor: "blue",
+          height: 300,
+          marginLeft: 45,
+          margin: -30,
+          // justifyContent: "center",
+          // alignContent: "center",
         }}
       >
         <Carousel
           {...baseOptions}
           style={{
-            width: windowWidth,
+            width: windowWidth * 0.78,
+            // backgroundColor: "red",
+            height: 260,
           }}
           loop={false}
           defaultScrollOffsetValue={scrollOffsetValue}
           mode="parallax"
           modeConfig={{
-            parallaxScrollingScale: 0.9,
+            parallaxScrollingScale: 0.8,
             parallaxScrollingOffset: 50,
           }}
           data={data}

@@ -29,6 +29,7 @@ const Slide = ({ imageSource }) => {
     <ImageBackground
       source={imageSource}
       style={styles.slide}
+      imageStyle={styles.imageStyle}
       resizeMode="cover"
     >
       <View style={styles.overlay}>
@@ -43,18 +44,28 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    height: 300,
+    height: 270,
+    width: 200,
+
+    marginLeft: 60,
   },
   overlay: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    marginTop: -120,
   },
   text: {
     color: "#fff",
-    fontSize: 20,
+    fontSize: 16,
     // fontWeight: "bold",
     fontFamily: "KodBold",
+    // justifyContent: "center",
+    // alignContent: "center",
+    textAlign: "center",
+  },
+  imageStyle: {
+    borderRadius: 10,
   },
 });
 

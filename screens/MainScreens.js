@@ -10,7 +10,7 @@ import MeScreen from "./MeScreen";
 import DiscoverScreen from "./DiscoverScreen";
 import AppDrawer from "./AppDrawer";
 import SettingsScreen from "./SettingsScreen";
-import AddScreen from "./AddScreen";
+import ExerciseScreen from "./ExerciseScreen";
 
 const MainStacks = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -50,26 +50,9 @@ const MainTabs = ({ navigation }) => {
           }}
         />
 
-        <Tab.Screen
-          name="AddTab"
-          component={Empty} // this is a workaround to show a full screen when this tab is pressed
-          options={{
-            tabBarIcon: ({ color }) => (
-              <Ionicons name="add" size={36} color={color} />
-            ),
-            tabBarLabel: () => null,
-          }}
-          listeners={{
-            tabPress: (e) => {
-              e.preventDefault(); // stop default navigation
-              navigation.navigate("Add"); // manually navigate to the stack screen outside of the tab navigators
-            },
-          }}
-        />
-
-        <Tab.Screen
+        {/* <Tab.Screen
           name="Inbox"
-          component={NotificationsScreen}
+          component={ExploreScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="chatbox" size={size} color={color} />
@@ -82,7 +65,7 @@ const MainTabs = ({ navigation }) => {
               setUnreadCount(null);
             },
           }}
-        />
+        />  */}
 
         <Tab.Screen
           name="SettingsDrawer"
@@ -109,17 +92,25 @@ const MainScreens = () => {
         options={{ headerShown: false }}
       />
       <MainStacks.Screen
-        name="Add"
-        component={AddScreen}
-        options={{ animation: "fade_from_bottom" }}
-      />
-      <MainStacks.Screen
         name="Settings"
         component={SettingsScreen}
         options={{ animation: "fade_from_bottom" }}
       />
+      <MainStacks.Screen
+        name="Exercise"
+        component={ExerciseScreen}
+        options={{ headerShown: false }}
+      />
     </MainStacks.Navigator>
   );
 };
+
+// const ExploreScreen = () => {
+//   return (
+//     <ExploreStacks.Navigator>
+//       <ExploreStacks.Screen name="Explore" component={DiscoverScreen} />
+//     </ExploreStacks.Navigator>
+//   );
+// };
 
 export default MainScreens;
