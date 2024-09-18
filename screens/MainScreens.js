@@ -6,11 +6,12 @@ import HomeScreen from "./HomeScreen";
 import NotificationsScreen from "./NotificationsScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { SafeAreaView } from "react-native-safe-area-context";
-import MeScreen from "./MeScreen";
 import DiscoverScreen from "./DiscoverScreen";
 import AppDrawer from "./AppDrawer";
 import SettingsScreen from "./SettingsScreen";
 import ExerciseScreen from "./ExerciseScreen";
+import ProfileScreen from "./ProfileScreen";
+import CustomTabBar from "@/components/CustomTabBars/CustomTabBar";
 
 const MainStacks = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -23,6 +24,7 @@ const MainTabs = ({ navigation }) => {
     <AppDrawer navigation={navigation}>
       {/* <SafeAreaView style={{ height: "100%" }}> */}
       <Tab.Navigator
+        tabBar={(props) => <CustomTabBar (...props) /> }
         screenOptions={{
           headerShown: false,
           tabBarActiveTintColor: "#262628",
@@ -50,31 +52,14 @@ const MainTabs = ({ navigation }) => {
           }}
         />
 
-        {/* <Tab.Screen
-          name="Inbox"
-          component={ExploreScreen}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Ionicons name="chatbox" size={size} color={color} />
-            ),
-            tabBarLabel: "Inbox",
-            tabBarBadge: unreadCount,
-          }}
-          listeners={{
-            tabPress: () => {
-              setUnreadCount(null);
-            },
-          }}
-        />  */}
-
         <Tab.Screen
           name="SettingsDrawer"
-          component={MeScreen}
+          component={ProfileScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
               <Ionicons name="person" size={size} color={color} />
             ),
-            tabBarLabel: "Me",
+            tabBarLabel: "Profile",
           }}
         />
       </Tab.Navigator>
@@ -99,7 +84,7 @@ const MainScreens = () => {
       <MainStacks.Screen
         name="Exercise"
         component={ExerciseScreen}
-        options={{ headerShown: false }}
+        options={{ headerShown: false, animation: "fade" }}
       />
     </MainStacks.Navigator>
   );
