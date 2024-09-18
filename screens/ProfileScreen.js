@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const ProfileScreen = () => {
@@ -77,6 +77,27 @@ const ProfileScreen = () => {
             <Text style={styles.personalisation}>Personalisation</Text>
           </View>
         </View>
+
+        <View
+          style={{
+            // backgroundColor: "red",
+            height: 80,
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
+          <View style={styles.frameParent}>
+            <Image
+              style={styles.setting}
+              resizeMode="cover"
+              source={require("@/assets/Photos/setting.png")}
+            />
+          </View>
+
+          <Pressable style={styles.logOutParent} onPress={() => {}}>
+            <Text style={styles.logOut}>Log Out</Text>
+          </Pressable>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -85,11 +106,11 @@ const ProfileScreen = () => {
 const styles = StyleSheet.create({
   profileContainer: {
     display: "flex",
-    // flex: 1,
+    flex: 1,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#262628",
-    marginTop: -40,
+    marginTop: -1,
   },
 
   proflileParent: {
@@ -353,6 +374,48 @@ const styles = StyleSheet.create({
     color: "#d96073",
     textAlign: "center",
     marginTop: 15,
+  },
+
+  setting: {
+    // backgroundColor: "yellow",
+    width: 45,
+    height: 45,
+  },
+  frameParent: {
+    // backgroundColor: "blue",
+    flex: 1,
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  logOut: {
+    // backgroundColor: "blue",
+    fontSize: 17,
+    fontWeight: "700",
+    fontFamily: "Urbanist-Bold",
+    color: "#d96073",
+    textAlign: "center",
+    width: 61,
+    height: 20,
+  },
+
+  logOutParent: {
+    // backgroundColor: "yellow",
+    borderRadius: 50,
+    borderStyle: "solid",
+    borderColor: "#d96073",
+    borderWidth: 1,
+    flex: 1,
+    width: "100%",
+    height: 42,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 10,
+    paddingVertical: 12,
+    marginRight: 120,
   },
 });
 

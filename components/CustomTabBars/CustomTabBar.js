@@ -57,11 +57,11 @@ function CustomTabBar({ state, descriptors, navigation }) {
           >
             {/* You should edit your UI for the item starting from here. Keep the TouchableOpacity the same */}
             {icon}
-            {labelText && (
+            {/* {labelText && (
               <Text style={{ color: isFocused ? "#fff" : "#a0a0a0" }}>
                 {labelText}
               </Text>
-            )}
+            )} */}
           </TouchableOpacity>
         );
       })}
@@ -73,19 +73,24 @@ const styles = StyleSheet.create({
   tabBar: {
     position: "absolute",
     bottom: 0,
-    left: 0,
+    // left: 0,
     right: 0,
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
     borderColor: "#dadada",
-    borderRadius: 8,
-    margin: 16,
-    padding: 16,
+    borderRadius: 50,
+    margin: 20,
+    marginRight: 40,
+    // paddingLeft: 5,
+    // paddingRight: 5,
     backgroundColor: "transparent",
   },
   tabBarItem: {
+    // backgroundColor: "blue",
+    padding: 22,
+    height: 60,
     flex: 1,
     alignItems: "center",
     justifyContent: "center",

@@ -141,6 +141,7 @@ const DiscoverScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   backgroundCont: {
     backgroundColor: "#262628",
+    flex: 1,
   },
   rectangleSearchParent: {
     borderRadius: 10,
@@ -195,6 +196,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
+    marginTop: 10,
   },
 
   text: {
@@ -213,7 +215,7 @@ const styles = StyleSheet.create({
   },
 
   challengeParent: {
-    marginTop: 60,
+    marginTop: 70,
     marginLeft: -60,
     backgroundColor: "#d96073",
     borderStyle: "solid",
@@ -234,7 +236,7 @@ const styles = StyleSheet.create({
   },
 
   sleepParent: {
-    marginTop: 60,
+    marginTop: 55,
     marginLeft: -60,
     backgroundColor: "#d96073",
     borderStyle: "solid",
@@ -276,7 +278,7 @@ const styles = StyleSheet.create({
   },
 
   meditationParent: {
-    marginTop: 40,
+    marginTop: 50,
     marginLeft: -60,
     backgroundColor: "#d96073",
     borderStyle: "solid",
@@ -297,6 +299,7 @@ const styles = StyleSheet.create({
   },
 
   exploreTextparent: {
+    marginTop: 70,
     margin: 35,
   },
 

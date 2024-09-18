@@ -24,10 +24,10 @@ const MainTabs = ({ navigation }) => {
     <AppDrawer navigation={navigation}>
       {/* <SafeAreaView style={{ height: "100%" }}> */}
       <Tab.Navigator
-        tabBar={(props) => <CustomTabBar (...props) /> }
+        tabBar={(props) => <CustomTabBar {...props} />}
         screenOptions={{
           headerShown: false,
-          tabBarActiveTintColor: "#262628",
+          tabBarActiveTintColor: "#fff6ef",
         }}
       >
         <Tab.Screen
@@ -38,6 +38,7 @@ const MainTabs = ({ navigation }) => {
               <Ionicons name="home" size={size} color={color} />
             ),
             tabBarLabel: "Home",
+            tabBarInactiveTintColor: "#BF4A5D",
           }}
         />
 
@@ -49,6 +50,7 @@ const MainTabs = ({ navigation }) => {
               <Ionicons name="search" size={size} color={color} />
             ),
             tabBarLabel: "Discover",
+            tabBarInactiveTintColor: "#D96073",
           }}
         />
 
@@ -60,6 +62,7 @@ const MainTabs = ({ navigation }) => {
               <Ionicons name="person" size={size} color={color} />
             ),
             tabBarLabel: "Profile",
+            tabBarInactiveTintColor: "#D96073",
           }}
         />
       </Tab.Navigator>

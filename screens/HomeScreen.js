@@ -49,7 +49,7 @@ const HomeScreen = () => {
               source={require("@/assets/Photos/Energy.png")}
               style={styles.energy}
             />
-            <Text style={styles.subTextTwo}>Mood</Text>
+            <Text style={styles.subTextTwo}>Energy</Text>
           </View>
         </View>
       </View>
@@ -164,11 +164,13 @@ const styles = StyleSheet.create({
     marginTop: 7,
   },
   headerTwo: {
-    fontSize: 16,
+    fontSize: 18,
     textTransform: "uppercase",
     fontFamily: "DelaGothic",
     color: "#fff6ef",
     textAlign: "left",
+    margin: 10,
+    paddingBottom: 5,
   },
   headerTwoParent: {
     // backgroundColor: "blue",
@@ -187,9 +189,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     // flex: 1,
     width: 112,
-    height: 120,
+    height: 135,
     // opacity: 0.5,
-    margin: 20,
+    margin: 15,
+    marginLeft: 5,
   },
   borderEnergy: {
     borderRadius: 10,
@@ -201,21 +204,21 @@ const styles = StyleSheet.create({
     width: 112,
     height: 120,
     // opacity: 0.5,
-    margin: 20,
+    margin: 10,
   },
   mood: {
     borderRadius: 1,
     width: 56,
     height: 56,
     margin: 25,
-    marginTop: 15,
+    marginTop: 25,
   },
   energy: {
     borderRadius: 1,
     width: 56,
     height: 56,
     margin: 25,
-    marginTop: 15,
+    marginTop: 25,
   },
   subTextTwo: {
     fontSize: 14,
