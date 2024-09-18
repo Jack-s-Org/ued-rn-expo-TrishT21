@@ -1,9 +1,9 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useFonts } from "expo-font";
 import SwipeableCarouselParallaxHorizontal from "@/components/SwipeableCarousel/SwipeableCarouselParallaxHorizontal";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.backgroundCont}>
       <View style={[styles.mainContainer]}>
@@ -31,9 +31,14 @@ const HomeScreen = () => {
         </View>
       </View>
       <SwipeableCarouselParallaxHorizontal />
-      <View style={styles.durationParent}>
+      <Pressable
+        style={styles.durationParent}
+        onPress={() => {
+          navigation.navigate("Tutorial");
+        }}
+      >
         <Text style={styles.duration}>10 mins</Text>
-      </View>
+      </Pressable>
       <View style={styles.headerTwoParent}>
         <Text style={styles.headerTwo}>how are you feeling</Text>
         <View style={styles.borderBorder}>

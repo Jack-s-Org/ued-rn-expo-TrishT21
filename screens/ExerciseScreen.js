@@ -25,17 +25,17 @@ const ExerciseScreen = ({ navigation }) => {
       <View>
         <View style={styles.exerciseParent}>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Exercise</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Exercise</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Exercise</Text>
@@ -179,9 +179,8 @@ const styles = StyleSheet.create({
   },
 
   star: {
-    borderRadius: 1,
-    width: 20,
-    height: 20,
+    width: 25,
+    height: 25,
     margin: 10,
   },
   tutparent: {

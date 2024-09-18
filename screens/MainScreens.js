@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import HomeScreen from "./HomeScreen";
-import NotificationsScreen from "./NotificationsScreen";
+import NotificationsScreen from "./TutorialScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { SafeAreaView } from "react-native-safe-area-context";
 import DiscoverScreen from "./DiscoverScreen";
@@ -12,6 +12,7 @@ import SettingsScreen from "./SettingsScreen";
 import ExerciseScreen from "./ExerciseScreen";
 import ProfileScreen from "./ProfileScreen";
 import CustomTabBar from "@/components/CustomTabBars/CustomTabBar";
+import TutorialScreen from "./TutorialScreen";
 
 const MainStacks = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -88,6 +89,11 @@ const MainScreens = () => {
         name="Exercise"
         component={ExerciseScreen}
         options={{ headerShown: false, animation: "fade" }}
+      />
+      <MainStacks.Screen
+        name="Tutorial"
+        component={TutorialScreen}
+        options={{ headerShown: false, animation: "slide_from_bottom" }}
       />
     </MainStacks.Navigator>
   );

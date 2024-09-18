@@ -25,17 +25,17 @@ const DiscoverScreen = ({ navigation }) => {
           }}
         >
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Exercise</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Exercise</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Exercise</Text>
@@ -44,12 +44,12 @@ const DiscoverScreen = ({ navigation }) => {
         <View style={styles.challengeParent}>
           <Text style={styles.text}>Challenge</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Challenge</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Challenge</Text>
@@ -58,22 +58,22 @@ const DiscoverScreen = ({ navigation }) => {
         <View style={styles.sleepParent}>
           <Text style={styles.text}>Sleep</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Sleep</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Sleep</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Sleep</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
         </View>
@@ -81,17 +81,17 @@ const DiscoverScreen = ({ navigation }) => {
         <View style={styles.nutritionParent}>
           <Text style={styles.text}>Nutrition</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Nutrition</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Nutrition</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
         </View>
@@ -99,17 +99,17 @@ const DiscoverScreen = ({ navigation }) => {
         <View style={styles.meditationParent}>
           <Text style={styles.text}>Meditation</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Meditation</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
           <Text style={styles.text}>Meditation</Text>
           <Image
-            source={require("@/assets/Photos/Star 1.png")}
+            source={require("@/assets/Photos/Star01.png")}
             style={styles.star}
           />
         </View>
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
   },
 
   exerciseParent: {
-    // backgroundColor: "red",
+    // backgroundColor: "blue",
     backgroundColor: "#d96073",
     borderStyle: "solid",
     borderColor: "#fff6ef",
@@ -208,10 +208,10 @@ const styles = StyleSheet.create({
   },
 
   star: {
-    borderRadius: 1,
-    width: 20,
-    height: 20,
+    width: 25,
+    height: 25,
     margin: 10,
+    // backgroundColor: "red",
   },
 
   challengeParent: {
