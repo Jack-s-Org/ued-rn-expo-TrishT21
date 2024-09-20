@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const ProfileScreen = () => {
+const ProfileScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.profileContainer}>
       <View style={styles.proflileParent}>
@@ -95,7 +95,12 @@ const ProfileScreen = () => {
           </View>
 
           <Pressable style={styles.logOutParent} onPress={() => {}}>
-            <Text style={styles.logOut}>Log Out</Text>
+            <Text
+              style={styles.logOut}
+              onPress={() => navigation.replace("SignIn")}
+            >
+              Log Out
+            </Text>
           </Pressable>
         </View>
       </View>
@@ -128,6 +133,9 @@ const styles = StyleSheet.create({
 
   rectParent: {
     margin: 15,
+    shadowRadius: 5,
+    elevation: 5,
+    shadowOpacity: 1,
   },
 
   rowOne: {
@@ -394,7 +402,7 @@ const styles = StyleSheet.create({
     // backgroundColor: "blue",
     fontSize: 17,
     fontWeight: "700",
-    fontFamily: "Urbanist-Bold",
+    fontFamily: "Kodchasan-Bold",
     color: "#d96073",
     textAlign: "center",
     width: 61,

@@ -4,17 +4,35 @@ import {
   DrawerItem,
   DrawerItemList,
 } from "@react-navigation/drawer";
-import { Pressable, Text, View } from "react-native";
+import { Pressable, Text, View, Image, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { setStatusBarBackgroundColor } from "expo-status-bar";
 
 const Drawer = createDrawerNavigator();
 
 const CustomDrawerHeader = ({ navigation }) => {
   return (
     <SafeAreaView
-      style={{ height: 100, display: "flex", justifyContent: "center" }}
+      style={{
+        height: 100,
+        display: "flex",
+        justifyContent: "center",
+      }}
     >
+      {/* <Pressable
+        style={styles.frameParent}
+        onPress={() => {
+          navigation.openDrawer();
+        }}
+      >
+        <Image
+          style={styles.setting}
+          resizeMode="cover"
+          source={require("@/assets/Photos/setting.png")}
+        />
+        <Text styles={{ color: "#fff" }}> hello </Text>
+      </Pressable> */}
       <Pressable
         onPress={() => {
           navigation.openDrawer();
@@ -65,5 +83,21 @@ const SettingsDrawerScreens = () => {
     </Drawer.Navigator>
   );
 };
+
+const styles = StyleSheet.create({
+  // setting: {
+  //   // backgroundColor: "yellow",
+  //   width: 45,
+  //   height: 45,
+  // },
+  // frameParent: {
+  //   // backgroundColor: "blue",
+  //   flex: 1,
+  //   width: "100%",
+  //   flexDirection: "row",
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  // },
+});
 
 export default SettingsDrawerScreens;

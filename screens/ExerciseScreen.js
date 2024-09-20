@@ -168,6 +168,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     marginTop: 10,
+    shadowRadius: 5,
+    elevation: 5,
+    shadowOpacity: 0.5,
   },
 
   text: {

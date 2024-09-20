@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useFonts } from "expo-font";
 import SwipeableCarouselParallaxHorizontal from "@/components/SwipeableCarousel/SwipeableCarouselParallaxHorizontal";
 
 const HomeScreen = ({ navigation }) => {
@@ -81,6 +80,9 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
     paddingLeft: 16,
     paddingRight: 16,
+    shadowRadius: 5,
+    elevation: 5,
+    shadowOpacity: 0.5,
   },
   header: {
     fontSize: 30,

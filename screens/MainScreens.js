@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import AntDesign from "@expo/vector-icons/AntDesign";
 import HomeScreen from "./HomeScreen";
-import NotificationsScreen from "./TutorialScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { SafeAreaView } from "react-native-safe-area-context";
+// import { SafeAreaView } from "react-native-safe-area-context";
 import DiscoverScreen from "./DiscoverScreen";
 import AppDrawer from "./AppDrawer";
 import SettingsScreen from "./SettingsScreen";
@@ -13,6 +11,7 @@ import ExerciseScreen from "./ExerciseScreen";
 import ProfileScreen from "./ProfileScreen";
 import CustomTabBar from "@/components/CustomTabBars/CustomTabBar";
 import TutorialScreen from "./TutorialScreen";
+import VinyasaScreen from "./VinyasaScreen";
 
 const MainStacks = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -56,7 +55,7 @@ const MainTabs = ({ navigation }) => {
         />
 
         <Tab.Screen
-          name="SettingsDrawer"
+          name="Profile"
           component={ProfileScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
@@ -95,6 +94,11 @@ const MainScreens = () => {
         component={TutorialScreen}
         options={{ headerShown: false, animation: "slide_from_bottom" }}
       />
+      {/* <MainStacks.Screen
+        name="Vinyasa"
+        component={VinyasaScreen}
+        // options={{ headerShown: false, animation: "slide_from_left" }}
+      /> */}
     </MainStacks.Navigator>
   );
 };

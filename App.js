@@ -20,6 +20,7 @@ export default function App() {
     KodRegular: require("@/assets/Fonts/Kodchasan-Regular.ttf"),
     KodMedium: require("@/assets/Fonts/Kodchasan-Medium.ttf"),
     KodBold: require("@/assets/Fonts/Kodchasan-Bold.ttf"),
+    LuxReg: require("@/assets/Fonts/LuxuriousScript-Regular.ttf"),
   });
 
   if (!fontsLoaded) {

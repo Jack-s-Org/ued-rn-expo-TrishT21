@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, Pressable, Image, Alert } from "react-native";
+import { StyleSheet, View, Text, Pressable, Image } from "react-native";
 // import { red } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -17,7 +17,7 @@ const DiscoverScreen = ({ navigation }) => {
       {/* <View>
           <Pressable style={styles.exercisePressable} onPress={() => {}} />
         </View> */}
-      <View style={styles.sectionParent}>
+      <View style={{ shadowRadius: 5, elevation: 5, shadowOpacity: 0.5 }}>
         <Pressable
           style={styles.exerciseParent}
           onPress={() => {
