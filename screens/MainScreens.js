@@ -15,6 +15,7 @@ import VinyasaScreen from "./VinyasaScreen";
 
 const MainStacks = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+const TutorialStack = createNativeStackNavigator();
 
 const Empty = () => null;
 
@@ -103,12 +104,12 @@ const MainScreens = () => {
   );
 };
 
-// const ExploreScreen = () => {
-//   return (
-//     <ExploreStacks.Navigator>
-//       <ExploreStacks.Screen name="Explore" component={DiscoverScreen} />
-//     </ExploreStacks.Navigator>
-//   );
-// };
+const TutorialScreens = () => {
+  return (
+    <TutorialStacks.Navigator>
+      <TutorialStacks.Screen name="Vinyasa" component={VinyasaScreen} />
+    </TutorialStacks.Navigator>
+  );
+};
 
 export default MainScreens;
