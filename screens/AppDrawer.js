@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, Image, StyleSheet } from "react-native";
 import { Drawer } from "react-native-drawer-layout";
 import {
   SafeAreaInsetsContext,
@@ -42,14 +42,20 @@ export default function AppDrawer({ navigation, children }) {
               setOpen(true);
             }}
             style={{
+              // backgroundColor: "red",
               zIndex: 99,
               position: "absolute",
               left: 0,
-              top: insets.top,
-              padding: 16,
+              // top: insets.top,
+              bottom: insets.bottom,
+              padding: 30,
+              paddingBottom: -80,
             }}
           >
-            <Ionicons name="menu" size={32} />
+            <Image
+              style={styles.setting}
+              source={require("@/assets/Photos/setting.png")}
+            />
           </TouchableOpacity>
         )}
       </SafeAreaInsetsContext.Consumer>
@@ -57,3 +63,14 @@ export default function AppDrawer({ navigation, children }) {
     </Drawer>
   );
 }
+
+const styles = StyleSheet.create({
+  setting: {
+    // backgroundColor: "blue",
+    // flex: 1,
+    width: 45,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});

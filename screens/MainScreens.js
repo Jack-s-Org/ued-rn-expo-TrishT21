@@ -15,7 +15,7 @@ import VinyasaScreen from "./VinyasaScreen";
 
 const MainStacks = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-const TutorialStack = createNativeStackNavigator();
+// const TutorialStack = createNativeStackNavigator();
 
 const Empty = () => null;
 
@@ -83,7 +83,7 @@ const MainScreens = () => {
       <MainStacks.Screen
         name="Settings"
         component={SettingsScreen}
-        options={{ animation: "fade_from_bottom" }}
+        options={{ animation: "slide_from_left", headerShown: false }}
       />
       <MainStacks.Screen
         name="Exercise"
@@ -104,12 +104,12 @@ const MainScreens = () => {
   );
 };
 
-const TutorialScreens = () => {
-  return (
-    <TutorialStacks.Navigator>
-      <TutorialStacks.Screen name="Vinyasa" component={VinyasaScreen} />
-    </TutorialStacks.Navigator>
-  );
-};
+// const TutorialScreens = () => {
+//   return (
+//     <TutorialStacks.Navigator>
+//       <TutorialStacks.Screen name="Vinyasa" component={VinyasaScreen} />
+//     </TutorialStacks.Navigator>
+//   );
+// };
 
 export default MainScreens;
