@@ -12,6 +12,31 @@ const SettingsScreen = ({ navigation }) => {
       >
         <Text style={styles.backText}>Back</Text>
       </Pressable>
+
+      <View style={styles.innerCont}>
+        <View style={{ backgroundColor: "blue", paddingBottom: 30 }}>
+          <Text style={styles.settings}>
+            <Text style={styles.setting}>Setting</Text>
+            <Text style={styles.s}>S</Text>
+          </Text>
+          <View>
+            <Text style={styles.bodyText}>Account</Text>
+            <Text style={styles.bodyText}>Edit Profile</Text>
+            <Text style={styles.bodyText}>Change Password</Text>
+            <Text style={styles.bodyText}>Privacy</Text>
+          </View>
+        </View>
+        <View>
+          <Text style={styles.notifications}>
+            <Text style={styles.n}>N</Text>
+            <Text style={styles.otifications}>otifications</Text>
+          </Text>
+          <View>
+            <Text style={styles.bodyText}>App Notifications</Text>
+            <Text style={styles.bodyText}>Notifications</Text>
+          </View>
+        </View>
+      </View>
     </SafeAreaView>
   );
 };
@@ -25,7 +50,7 @@ const styles = StyleSheet.create({
   backButton: {
     borderRadius: 10,
     borderStyle: "solid",
-    borderColor: "#C6C3F2",
+    borderColor: "#FFF6EF",
     borderWidth: 1,
     width: 110,
     height: 27,
@@ -36,9 +61,51 @@ const styles = StyleSheet.create({
   backText: {
     fontSize: 14,
     fontFamily: "Kodchasan-Bold",
-    color: "#C6C3F2",
+    color: "#FFF6EF",
     textAlign: "center",
     marginTop: 4,
+  },
+
+  innerCont: {
+    backgroundColor: "red",
+    margin: 50,
+  },
+  setting: {
+    fontSize: 22,
+    fontFamily: "DelaGothicOne-Regular",
+  },
+  s: {
+    fontSize: 60,
+    letterSpacing: 6.3,
+    fontFamily: "LuxuriousScript-Regular",
+  },
+  settings: {
+    color: "#fff",
+    textAlign: "left",
+    width: 126,
+  },
+
+  bodyText: {
+    alignSelf: "stretch",
+    fontSize: 16,
+    fontFamily: "Kodchasan-Regular",
+    color: "#fff",
+    textAlign: "left",
+    padding: 10,
+  },
+
+  n: {
+    fontSize: 60,
+    fontFamily: "LuxuriousScript-Regular",
+  },
+  otifications: {
+    fontSize: 20,
+    fontFamily: "DelaGothicOne-Regular",
+  },
+  notifications: {
+    color: "#fff",
+    textAlign: "left",
+    width: 140,
   },
 });
 

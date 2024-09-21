@@ -13,6 +13,7 @@ export default function AppDrawer({ navigation, children }) {
 
   return (
     <Drawer
+      // style={{ backgroundColor: "#D96073" }}
       open={open}
       onOpen={() => setOpen(true)}
       onClose={() => setOpen(false)}
@@ -47,8 +48,9 @@ export default function AppDrawer({ navigation, children }) {
               position: "absolute",
               left: 0,
               // top: insets.top,
-              bottom: insets.bottom,
-              padding: 30,
+              bottom: 19,
+              padding: 42,
+              paddingTop: 20,
               paddingBottom: -80,
             }}
           >
@@ -69,6 +71,7 @@ const styles = StyleSheet.create({
     // backgroundColor: "blue",
     // flex: 1,
     width: 45,
+    height: 45,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
