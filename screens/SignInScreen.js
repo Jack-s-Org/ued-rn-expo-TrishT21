@@ -4,11 +4,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const SignInScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text styles={styles.signUpText}> Sign Up </Text>
+      <Text style={styles.signUpText}> Sign Up </Text>
 
       <Pressable style={styles.login}>
         <Text
-          styles={styles.loginText}
+          style={styles.loginText}
           onPress={() => {
             navigation.replace("Main", { screen: "Home" });
           }}
@@ -30,6 +30,10 @@ const styles = StyleSheet.create({
   },
   signUpText: {
     color: "#d96073",
+    fontSize: 16,
+    fontWeight: "700",
+    fontFamily: "Kodchasan-Bold",
+    padding: 10,
   },
   login: {
     borderRadius: 15,
@@ -45,7 +49,7 @@ const styles = StyleSheet.create({
   },
 
   loginText: {
-    fontSize: 30,
+    fontSize: 16,
     fontWeight: "700",
     fontFamily: "Kodchasan-Bold",
     color: "#d96073",

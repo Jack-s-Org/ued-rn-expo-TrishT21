@@ -14,7 +14,7 @@ const SettingsScreen = ({ navigation }) => {
       </Pressable>
 
       <View style={styles.innerCont}>
-        <View style={{ backgroundColor: "blue", paddingBottom: 30 }}>
+        <View style={{ paddingBottom: 30 }}>
           <Text style={styles.settings}>
             <Text style={styles.setting}>Setting</Text>
             <Text style={styles.s}>S</Text>
@@ -36,6 +36,16 @@ const SettingsScreen = ({ navigation }) => {
             <Text style={styles.bodyText}>Notifications</Text>
           </View>
         </View>
+        <View>
+          <Text style={styles.more}>
+            <Text style={styles.mor}>Mor</Text>
+            <Text style={styles.e}>E</Text>
+          </Text>
+          <View>
+            <Text style={styles.bodyText}>Language</Text>
+            <Text style={styles.bodyText}>Country</Text>
+          </View>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -55,7 +65,7 @@ const styles = StyleSheet.create({
     width: 110,
     height: 27,
     marginLeft: 145,
-    marginTop: -30,
+    marginTop: -10,
   },
 
   backText: {
@@ -67,11 +77,11 @@ const styles = StyleSheet.create({
   },
 
   innerCont: {
-    backgroundColor: "red",
-    margin: 50,
+    // backgroundColor: "red",
+    margin: 60,
   },
   setting: {
-    fontSize: 22,
+    fontSize: 18,
     fontFamily: "DelaGothicOne-Regular",
   },
   s: {
@@ -99,13 +109,27 @@ const styles = StyleSheet.create({
     fontFamily: "LuxuriousScript-Regular",
   },
   otifications: {
-    fontSize: 20,
+    fontSize: 18,
     fontFamily: "DelaGothicOne-Regular",
   },
   notifications: {
     color: "#fff",
     textAlign: "left",
-    width: 140,
+    width: 145,
+  },
+
+  mor: {
+    fontSize: 18,
+    fontFamily: "DelaGothicOne-Regular",
+  },
+  e: {
+    fontSize: 60,
+    fontFamily: "LuxuriousScript-Regular",
+  },
+  more: {
+    color: "#fff",
+    textAlign: "left",
+    width: 83,
   },
 });
 
